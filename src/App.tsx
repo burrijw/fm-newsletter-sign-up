@@ -1,5 +1,13 @@
+import ConnectPage from "./pages/ConnectPage";
+import ResultsPage from "./pages/ResultsPage";
+
 function App() {
-    return <></>;
+    return (
+        <>
+            <ConnectPage />
+            <ResultsPage />
+        </>
+    );
 }
 
 export default App;
