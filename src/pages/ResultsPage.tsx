@@ -7,7 +7,7 @@ interface ResultsPageProps {
 
 function ResultsPage({ toggleResultsPage, emailAddress }: ResultsPageProps) {
     return (
-        <div className="bg-white px-6 text-navy sm:max-w-lg sm:rounded-lg sm:p-16">
+        <div className="bg-white px-6 text-navy shadow-primary sm:max-w-lg sm:rounded-lg sm:p-16">
             <img
                 src="/images/icon-success.svg"
                 alt=""
