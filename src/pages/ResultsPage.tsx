@@ -10,6 +10,8 @@ function ResultsPage({ toggleResultsPage, emailAddress }: ResultsPageProps) {
         <div className="bg-white px-6 text-navy shadow-primary sm:max-w-lg sm:rounded-lg sm:p-16">
             <img
                 src="/images/icon-success.svg"
+                width="64"
+                height="64"
                 alt=""
                 className="mt-36 aspect-square w-16 sm:mt-0"
             />

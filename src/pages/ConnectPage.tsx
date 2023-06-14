@@ -62,6 +62,8 @@ function ConnectPage({
                 <img
                     className="lg:rounded-none block w-full"
                     src={featureImgMobile}
+                    width="400"
+                    height="593"
                     alt=""
                     role="presentation"
                 />
