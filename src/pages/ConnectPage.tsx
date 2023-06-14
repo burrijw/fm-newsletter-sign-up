@@ -2,13 +2,7 @@ import featureImgMobile from "../assets/images/illustration-sign-up-mobile.svg";
 import featureImgDesktop from "../assets/images/illustration-sign-up-desktop.svg";
 import Button from "../components/Button";
 import clsx from "clsx";
-import {
-    Dispatch,
-    SetStateAction,
-    FocusEventHandler,
-    useRef,
-    FormEventHandler,
-} from "react";
+import { Dispatch, SetStateAction, useRef, FormEventHandler } from "react";
 
 interface ConnectPageProps {
     emailAddress: string;
