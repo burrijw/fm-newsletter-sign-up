@@ -1,20 +1,20 @@
-# Frontend Mentor - Newsletter sign-up form with success message solution
+# Newsletter Sign Up Challenge    
 
-This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor][1]. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 😎
 
 ## Table of contents
 
--   [Overview](#overview)
-    -   [The challenge](#the-challenge)
-    -   [Screenshot](#screenshot)
-    -   [Links](#links)
--   [My process](#my-process)
-    -   [Built with](#built-with)
-    -   [What I learned](#what-i-learned)
-    -   [Continued development](#continued-development)
-    -   [Useful resources](#useful-resources)
--   [Author](#author)
--   [Acknowledgments](#acknowledgments)
+-   [Overview][2]
+	-   [The challenge][3]
+	-   [Screenshot][4]
+	-   [Links][5]
+-   [My process][6]
+	-   [Built with][7]
+	-   [What I learned][8]
+	-   [Continued development][9]
+	-   [Useful resources][10]
+-   [Author][11]
+-   [Acknowledgments][12]
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -27,52 +27,54 @@ Users should be able to:
 -   Add their email and submit the form
 -   See a success message with their email after successfully submitting the form
 -   See form validation messages if:
-    -   The field is left empty
-    -   The email address is not formatted correctly
+	-   The field is left empty
+	-   The email address is not formatted correctly
 -   View the optimal layout for the interface depending on their device's screen size
 -   See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Add solution URL here][13]
+-   Live Site URL: [Add live site URL here][14]
 
 ## My process
 
 ### Built with
 
--   React & Typescript
--   Tailwind CSS
+- React & Typescript
+- Vite
+- Tailwind CSS
 
 ### What I learned
 
 I wanted to really dive deep in accessibility with this one, so I tested everything with voiceover and auditing tools as I went along. I discovered some bugs and weird behavior with Safari and VO:
 
--   VO will not accounce a list as such when the list-style-type is `none`.
-
-### Useful resources
-
--   [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
--   [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+-   VO will not announce a list as such when the list-style-type is `none`.
+- 
 
 ## Author
 
-Frontend Mentor: [@burrijw](https://www.frontendmentor.io/profile/burrijw)
+Frontend Mentor: [@burrijw][15]
 
 ## Acknowledgments
 
 Shoutout to MDN, WAI, and Google Search.
+
+[1]:	https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv
+[2]:	#overview
+[3]:	#the-challenge
+[4]:	#screenshot
+[5]:	#links
+[6]:	#my-process
+[7]:	#built-with
+[8]:	#what-i-learned
+[9]:	#continued-development
+[10]:	#useful-resources
+[11]:	#author
+[12]:	#acknowledgments
+[13]:	https://your-solution-url.com
+[14]:	https://your-live-site-url.com
+[15]:	https://www.frontendmentor.io/profile/burrijw
