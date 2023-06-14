@@ -17,7 +17,7 @@ function Button({
     return (
         <button
             className={clsx(
-                "focus mt-6 w-full rounded-sm bg-navy py-[1.0625rem] text-body font-bold text-white transition",
+                "focus w-full rounded-sm bg-navy py-[1.0625rem] text-body font-bold text-white transition",
                 "hover:cursor-pointer hover:bg-vermillion hover:text-white hover:shadow-secondary",
                 className
             )}

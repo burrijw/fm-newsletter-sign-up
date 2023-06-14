@@ -2,7 +2,14 @@ import featureImgMobile from "../assets/images/illustration-sign-up-mobile.svg";
 import featureImgDesktop from "../assets/images/illustration-sign-up-desktop.svg";
 import Button from "../components/Button";
 import clsx from "clsx";
-import { Dispatch, SetStateAction } from "react";
+import {
+    Dispatch,
+    SetStateAction,
+    FocusEventHandler,
+    useRef,
+    FormEventHandler,
+} from "react";
+import { SubmitHandler } from "react-hook-form";
 
 interface ConnectPageProps {
     emailAddress: string;
@@ -16,16 +23,42 @@ function ConnectPage({
     setEmailAddress,
 }: ConnectPageProps) {
     //
+    const errorMsgRef = useRef<HTMLParagraphElement>(null);
+
+    const handleInputBlur: FocusEventHandler<HTMLInputElement> = (event) => {
+        const isValid = event.target.validity.valid;
+        if (!isValid) {
+            event.target.classList.add(
+                "bg-vermillion-faded",
+                "text-vermillion",
+                "border-vermillion"
+            );
+            errorMsgRef.current!.classList.remove("hidden");
+        } else {
+            event.target.classList.remove(
+                "bg-vermillion-faded",
+                "text-vermillion",
+                "border-vermillion"
+            );
+            errorMsgRef.current!.classList.add("hidden");
+        }
+    };
+
+    const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
+        event.preventDefault();
+        const isValid = event.currentTarget.checkValidity();
+        isValid && toggleResultsPage();
+    };
 
     return (
         <div
             className={clsx(
                 "mx-auto",
-                "sm:container sm:mb-6 sm:rounded-b-md sm:bg-white sm:shadow-primary",
+                "sm:container sm:mb-6 sm:overflow-hidden sm:rounded-md sm:bg-white sm:shadow-primary",
                 "lg:flex lg:max-w-[928px] lg:flex-row-reverse lg:items-center lg:gap-16 lg:rounded-lg lg:bg-white lg:p-6"
             )}
         >
-            <picture role="presentation">
+            <picture>
                 <source srcSet={featureImgDesktop} media="(min-width: 60rem)" />
                 <img
                     className="lg:rounded-none block w-full"
@@ -77,7 +110,15 @@ function ConnectPage({
                         </li>
                     </ul>
                 </div>
-                <form className="mt-10" onSubmit={toggleResultsPage}>
+                <form
+                    className="mt-10"
+                    onSubmit={handleSubmit}
+                    aria-describedby="form-desc"
+                    noValidate
+                >
+                    <p className="sr-only" id="form-desc">
+                        Enter your email address to subscribe to our newsletter.
+                    </p>
                     <div className="flex justify-between text-body-sm">
                         <label className="text-navy" htmlFor="email">
                             Email address
@@ -85,6 +126,7 @@ function ConnectPage({
                         <p
                             className="hidden text-vermillion"
                             id="error-message"
+                            ref={errorMsgRef}
                         >
                             Oops! Wrong format
                         </p>
@@ -104,9 +146,11 @@ function ConnectPage({
                         onChange={(event) => {
                             setEmailAddress(event.target.value);
                         }}
+                        onBlur={handleInputBlur}
+                        aria-errormessage="error-message"
                     />
                     {/* TODO: maybe fix the button hover so it's transitionable using a pseudo element and opacity */}
-                    <Button type="submit">
+                    <Button className="mt-6" type="submit">
                         Subscribe to monthly newsletter
                     </Button>
                 </form>
