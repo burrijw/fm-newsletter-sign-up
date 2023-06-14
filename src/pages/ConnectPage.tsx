@@ -23,28 +23,32 @@ function ConnectPage({
 }: ConnectPageProps) {
     //
     const errorMsgRef = useRef<HTMLParagraphElement>(null);
+    const emailInputRef = useRef<HTMLInputElement>(null);
 
-    const handleInputBlur: FocusEventHandler<HTMLInputElement> = (event) => {
-        const isValid = event.target.validity.valid;
-        if (!isValid) {
-            event.target.classList.add(
-                "bg-vermillion-faded",
-                "text-vermillion",
-                "border-vermillion"
-            );
-            errorMsgRef.current!.classList.remove("hidden");
-        } else {
-            event.target.classList.remove(
+    const validateEmailAddress = () => {
+        const isValid = emailInputRef.current?.validity.valid;
+        if (isValid) {
+            console.log("email address is valid");
+            emailInputRef.current.classList.remove(
                 "bg-vermillion-faded",
                 "text-vermillion",
                 "border-vermillion"
             );
             errorMsgRef.current!.classList.add("hidden");
+        } else {
+            console.error("email address is NOT valid");
+            emailInputRef.current?.classList.add(
+                "bg-vermillion-faded",
+                "text-vermillion",
+                "border-vermillion"
+            );
+            errorMsgRef.current!.classList.remove("hidden");
         }
     };
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
         event.preventDefault();
+        validateEmailAddress();
         const isValid = event.currentTarget.checkValidity();
         isValid && toggleResultsPage();
     };
@@ -149,10 +153,11 @@ function ConnectPage({
                         value={emailAddress}
                         required
                         placeholder="you@example.com"
+                        ref={emailInputRef}
                         onChange={(event) => {
                             setEmailAddress(event.target.value);
                         }}
-                        onBlur={handleInputBlur}
+                        onBlur={validateEmailAddress}
                         aria-errormessage="error-message"
                     />
                     {/* TODO: maybe fix the button hover so it's transitionable using a pseudo element and opacity */}
