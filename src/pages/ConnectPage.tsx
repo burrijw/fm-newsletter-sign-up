@@ -58,12 +58,17 @@ function ConnectPage({
             )}
         >
             <picture>
-                <source srcSet={featureImgDesktop} media="(min-width: 60rem)" />
+                <source
+                    srcSet={featureImgDesktop}
+                    media="(min-width: 60rem)"
+                    width="400"
+                    height="593"
+                />
                 <img
                     className="lg:rounded-none block w-full"
                     src={featureImgMobile}
-                    width="400"
-                    height="593"
+                    width="375"
+                    height="284"
                     alt=""
                     role="presentation"
                 />
