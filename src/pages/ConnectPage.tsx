@@ -9,7 +9,6 @@ import {
     useRef,
     FormEventHandler,
 } from "react";
-import { SubmitHandler } from "react-hook-form";
 
 interface ConnectPageProps {
     emailAddress: string;
