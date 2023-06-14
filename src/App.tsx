@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/700.css";
 import ConnectPage from "./pages/ConnectPage";
 import ResultsPage from "./pages/ResultsPage";
 

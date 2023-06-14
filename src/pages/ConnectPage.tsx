@@ -85,6 +85,8 @@ function ConnectPage({
                             <img
                                 className="mt-[1px]"
                                 src="/images/icon-list.svg"
+                                width="21"
+                                height="21"
                                 alt=""
                                 role="presentation"
                             />
@@ -96,6 +98,8 @@ function ConnectPage({
                             <img
                                 className="mt-[1px]"
                                 src="/images/icon-list.svg"
+                                width="21"
+                                height="21"
                                 alt=""
                                 role="presentation"
                             />
@@ -107,6 +111,8 @@ function ConnectPage({
                             <img
                                 className="mt-[1px]"
                                 src="/images/icon-list.svg"
+                                width="21"
+                                height="21"
                                 alt=""
                                 role="presentation"
                             />
