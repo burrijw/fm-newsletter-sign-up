@@ -13,6 +13,7 @@ function App() {
             setEmailAddress("");
         }
         setIsResultsPageVisible((prev) => !prev);
+        window.scrollTo(0, 0);
     }
 
     return (
