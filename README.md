@@ -32,10 +32,12 @@ Users should be able to:
 
 ### Screenshot
 
+![screenshot](https://github.com/burrijw/fm-newsletter-sign-up/assets/50222543/dea0fc45-d2be-428e-aee8-f9d04500dc06)
+
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/newsletter-sign-up-react-ts-tailwind-vite-xJDPx0QjzV)
+-   Live Site URL: [Live Site on Netlify](https://marvelous-bavarois-a178fa.netlify.app)
 
 ## My process
 
